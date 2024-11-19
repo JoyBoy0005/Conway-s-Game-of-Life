@@ -1,0 +1,76 @@
+/* Grid container customization */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20px, 1fr)); /* Adjust number of columns based on available space */
+  grid-template-rows: repeat(auto-fill, minmax(20px, 1fr));    /* Adjust number of rows based on available space */
+  gap: 2px;
+  width: 100%;
+  max-width: 500px; /* Maximum width for the grid */
+}
+
+/* Cell styling */
+.cell {
+  background-color: white;
+  border: 1px solid #333;
+  width: 100%;
+  height: 100%;
+}
+
+.cell.black {
+  background-color: black;
+}
+
+/* Additional custom styles for responsiveness and visuals */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(15px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(15px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(10px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(10px, 1fr));
+  }
+}
+/* Ensuring the body takes up the full height of the viewport */
+body {
+  background-color: #6f6969;
+  color: #ffffff;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+}
+
+h1, p, button {
+  margin: 10px; /* Add some space between elements */
+  text-align: center; /* Ensure the text in h1, p, and button is centered */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #666; /* Change button color on hover */
+}
+
+#rules {
+  text-align: center;
+  margin-top: 20px;
+  max-width: 500px; /* Limit width of the rules section */
+}
+
+#rules p {
+  margin: 5px 0; /* Add spacing between rule paragraphs */
+}
